@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import Product from "./Product";
+
 import styles from './index.styl';
 
 const List = ({ productsProvider }) => {
@@ -15,10 +17,7 @@ const List = ({ productsProvider }) => {
 	return (
 		<div className={styles.itemsList}>
 			{ products.map(p => 
-					<div key={p.id}>
-						<h2>{p.title}</h2>
-						<p>{p.description}</p>
-					</div>
+					<Product key={p.id} product={p} />
 				)
 			}
 		</div>

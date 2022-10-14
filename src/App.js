@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import CartContextProvider from './utils/CartContextProvider';
 import List from './components/List';
 import Add from './components/Add.js';
 
@@ -13,12 +14,15 @@ const App = () => {
 			<header>
 				<button onClick={onPageChange.bind(null, 'List')}>List</button>
 				<button onClick={onPageChange.bind(null, 'Add')}>Add</button>
+				<button>Cart</button>
 			</header>
-			{  page === 'List' ? (
-				<List />
-			) : (
-				<Add />
-			)}
+			<CartContextProvider>
+				{  page === 'List' ? (
+					<List />
+				) : (
+					<Add />
+				)}
+			</CartContextProvider>
 		</div>
 	);
 };
