@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import List from './components/List.js';
+import List from './components/List';
 import Add from './components/Add.js';
 
 const App = () => {
