@@ -35,4 +35,4 @@ const preload = (promise, timeout) => {
   return { read }
 };
 
-export const getAllProducts = async () => preload(request({ endpoint: '/products' }), 3000);
+export const getAllProducts = async () => preload(request({ endpoint: '/products' }), 500);

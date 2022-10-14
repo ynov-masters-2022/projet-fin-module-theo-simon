@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import styles from './index.styl';
+
 const List = ({ productsProvider }) => {
 
 	const [products, setProducts] = useState([]);
@@ -11,14 +13,15 @@ const List = ({ productsProvider }) => {
 	}, [_products]);
 
 	return (
-		<>
+		<div className={styles.itemsList}>
 			{ products.map(p => 
 					<div key={p.id}>
-						<p>{p.title}</p>
+						<h2>{p.title}</h2>
+						<p>{p.description}</p>
 					</div>
 				)
 			}
-		</>
+		</div>
 	)
 };
 

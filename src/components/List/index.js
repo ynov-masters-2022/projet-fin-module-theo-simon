@@ -1,8 +1,10 @@
-import { Suspense, useState, useEffect } from 'react';
+import { Suspense, useState, useEffect, lazy } from 'react';
 import { getAllProducts } from '../../utils/api';
 
-import List from './List';
+const List = lazy(() => import('./List'));
 import Loader from './Loader';
+
+import styles from './index.styl';
 
 export default () => {
 	const [productsProvider, setProductsProvider] = useState(null);
@@ -18,7 +20,7 @@ export default () => {
 	};
 
 	return (
-		<div>
+		<div className={styles.list}>
       <h2>Products:</h2>
       <Suspense fallback={<Loader />}>
         <List productsProvider={productsProvider} />
