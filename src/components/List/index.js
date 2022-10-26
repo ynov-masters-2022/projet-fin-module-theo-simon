@@ -15,7 +15,6 @@ export default () => {
 
 	const init = async () => {
 		const provider = await getAllProducts();
-    console.log(provider);
 		setProductsProvider(provider);
 	};
 

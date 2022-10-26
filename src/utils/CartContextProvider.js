@@ -24,7 +24,7 @@ export default ({ children }) => {
 
   return (
     <CartContext.Provider value={getContextValue()}>
-    {children}
+      {children}
     </CartContext.Provider>
   )
 };

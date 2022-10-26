@@ -7,10 +7,8 @@ const Product = ({ product }) => {
 
   const { products, dispatch } = useContext(CartContext);
 
-  const addToCart = () => {
-    console.log(products);
-    dispatch({ products: products.push(product) })
-  }
+  const addToCart = () => dispatch({ products: products.push(product) });
+
 
   return (
     <div className={styles.product}>
