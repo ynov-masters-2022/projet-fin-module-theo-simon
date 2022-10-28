@@ -20,7 +20,7 @@ export default () => {
 
 	return (
 		<div className={styles.list}>
-      <h2>Products:</h2>
+      <h2>Products list:</h2>
       <Suspense fallback={<Loader />}>
         <List productsProvider={productsProvider} />
       </Suspense>
