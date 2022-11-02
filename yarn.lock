@@ -5428,18 +5428,18 @@ raw-body@2.5.1:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-dom@^18.2.0:
-  version "18.2.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"
-  integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
+react-dom@18.3.0-next-2ac77aab9-20221029:
+  version "18.3.0-next-2ac77aab9-20221029"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.3.0-next-2ac77aab9-20221029.tgz#b56fca8089a9e5ef72d6991211a1690fe9e6acc1"
+  integrity sha512-iDiBse6SyzrEggVqDGVyutQGI++444I0NISLB8TslY/VTCULaIJEr4wqOYzDNhveAw7/t5v4Ag5n4TIdb+Nu+A==
   dependencies:
     loose-envify "^1.1.0"
-    scheduler "^0.23.0"
+    scheduler "0.24.0-next-2ac77aab9-20221029"
 
-react@^18.2.0:
-  version "18.2.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
-  integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
+react@18.3.0-next-2ac77aab9-20221029:
+  version "18.3.0-next-2ac77aab9-20221029"
+  resolved "https://registry.yarnpkg.com/react/-/react-18.3.0-next-2ac77aab9-20221029.tgz#723b9acdd06dd97684e6ef21b4b84401cb8d8b12"
+  integrity sha512-mqgqR4o3vGKRs+zdUjfnVEODjU/KxJ8m/HU5nNOkBNxcm0AyVeGFWxLA0HVXeHsfzRvGLi7iPGd+nj8upna3hw==
   dependencies:
     loose-envify "^1.1.0"
 
@@ -5758,10 +5758,10 @@ sax@~1.2.4:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
-scheduler@^0.23.0:
-  version "0.23.0"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.23.0.tgz#ba8041afc3d30eb206a487b6b384002e4e61fdfe"
-  integrity sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==
+scheduler@0.24.0-next-2ac77aab9-20221029:
+  version "0.24.0-next-2ac77aab9-20221029"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.24.0-next-2ac77aab9-20221029.tgz#ed32c26b7b2b1a07039098396541ce9af999acca"
+  integrity sha512-6HrMWCoAtkvD22wf0a2G6pUYAkzp6l0W9LgERL+0qVVVO3SI255s3bzESFXLX2Xw69RVQe8hpNbZzu0i2HCKmg==
   dependencies:
     loose-envify "^1.1.0"
 

@@ -15,8 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "css-loader": "^6.7.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "18.3.0-next-2ac77aab9-20221029",
+    "react-dom": "18.3.0-next-2ac77aab9-20221029",
     "style-loader": "^3.3.1",
     "stylus": "^0.59.0",
     "stylus-loader": "^7.1.0"
