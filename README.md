@@ -22,3 +22,5 @@ The different features and their usage will be detailed in this documentation.
 ### Contexts
 
 ### Suspense
+
+### CSS Modules
