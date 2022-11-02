@@ -5,16 +5,19 @@ import { CartContext } from '../../utils/Contexts';
 
 const Product = ({ product }) => {
 
-  const { products, dispatch } = useContext(CartContext);
+  const { addProductToCart } = useContext(CartContext);
 
-  const addToCart = () => dispatch({ products: products.push(product) });
+  const addToCart = () => addProductToCart(product);
 
 
   return (
     <div className={styles.product}>
       <h2>{product.title}</h2>
       <p>{product.description}</p>
-      <button onClick={addToCart}>Add to cart</button>
+      <div className={styles.footer}>
+        <button onClick={addToCart}>Add to cart</button>
+        <p>{product.price}$</p>
+      </div>
     </div>
   )
 };
