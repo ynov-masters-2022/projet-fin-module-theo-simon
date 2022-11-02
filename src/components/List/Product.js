@@ -9,7 +9,6 @@ const Product = ({ product }) => {
 
   const addToCart = () => addProductToCart(product);
 
-
   return (
     <div className={styles.product}>
       <h2>{product.title}</h2>

@@ -1,18 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, use } from "react";
 
 import Product from "./Product";
+import { getAllProducts } from '../../utils/api';
 
 import styles from './index.styl';
 
-const List = ({ productsProvider }) => {
-
-	const [products, setProducts] = useState([]);
-
-	const _products = productsProvider?.read();
-
-	useEffect(() => {
-		_products && setProducts(_products);
-	}, [_products]);
+const List = () => {
+  const products = use(getAllProducts);
 
 	return (
 		<div className={styles.itemsList}>
