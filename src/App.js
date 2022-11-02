@@ -4,7 +4,7 @@ import CartContextProvider from './utils/CartContextProvider';
 
 import Header from './components/Header'
 import List from './components/List';
-import Add from './components/Add.js';
+import Add from './components/Add';
 
 const App = () => {
 	const [page, setPage] = useState('List');
