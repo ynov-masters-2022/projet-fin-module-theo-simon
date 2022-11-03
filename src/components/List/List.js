@@ -1,4 +1,4 @@
-import { useEffect, useState, use } from "react";
+import { use } from "react";
 
 import Product from "./Product";
 import { getAllProducts } from '../../utils/api';

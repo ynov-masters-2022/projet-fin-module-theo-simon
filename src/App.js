@@ -1,35 +1,25 @@
-import {useState} from 'react';
+import { BrowserRouter } from "react-router-dom";
 
 import CartContextProvider from './utils/CartContextProvider';
+import { ThemeProvider } from './utils/ThemeContextProvider';
+import GlobalStyle from './utils/style/GlobalStyle';
 
 import Header from './components/Header'
-import List from './components/List';
-import Add from './components/Add';
-import {ThemeProvider} from "./utils/ThemeProvider";
-import Footer from "./components/Footer";
-import GlobalStyle from "./utils/style/GlobalStyle";
+import AppRouter from './components/AppRouter';
 
 const App = () => {
-  const [page, setPage] = useState('List');
 
-  const onPageChange = type => setPage(type);
-
-  return (
+	return (
     <ThemeProvider>
       <GlobalStyle />
-      <div>
+      <BrowserRouter>
         <CartContextProvider>
-          <Header onPageChange={onPageChange}/>
-          {page === 'List' ? (
-            <List/>
-          ) : (
-            <Add/>
-          )}
+          <Header />
+          <AppRouter />
         </CartContextProvider>
-				<Footer />
-      </div>
+      </BrowserRouter>
     </ThemeProvider>
-  );
+	);
 };
 
 export default App;

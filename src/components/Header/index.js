@@ -4,12 +4,12 @@ import CartModal from '../CartModal';
 
 import styles from './index.styl';
 
-export default ({ onPageChange }) => {
+export default () => {
   const cartModalRef = useRef();
 
   const onCartClick = () => cartModalRef.current.toggle();
 
-  const _onPageChange = page => onPageChange(page);
+  const _onPageChange = page => {};
 
   return (
     <>

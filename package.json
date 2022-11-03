@@ -18,6 +18,7 @@
     "react": "18.3.0-next-2ac77aab9-20221029",
     "react-dom": "18.3.0-next-2ac77aab9-20221029",
     "sass": "^1.55.0",
+    "react-router-dom": "^6.4.3",
     "style-loader": "^3.3.1",
     "styled-components": "^5.3.6",
     "stylus": "^0.59.0",

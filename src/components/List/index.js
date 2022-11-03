@@ -1,7 +1,6 @@
-import { Suspense, useState, useEffect, lazy } from 'react';
-import { getAllProducts } from '../../utils/api';
+import { Suspense } from 'react';
 
-const List = lazy(() => import('./List'));
+import List from './List';
 import Loader from './Loader';
 
 import styles from './index.styl';

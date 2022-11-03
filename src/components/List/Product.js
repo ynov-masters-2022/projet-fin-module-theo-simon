@@ -12,7 +12,6 @@ const Product = ({ product }) => {
   return (
     <div className={styles.product}>
       <h2>{product.title}</h2>
-      <p>{product.description}</p>
       <div className={styles.footer}>
         <button onClick={addToCart}>Add to cart</button>
         <p>{product.price}$</p>
