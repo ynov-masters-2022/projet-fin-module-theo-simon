@@ -11,20 +11,9 @@ const FooterContainer = styled.footer`
     padding-top: 60px;
 `
 
-const NightModeButton = styled.button`
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: black;
-`
-
 function Footer() {
-  const { toggleTheme, theme } = useContext(ThemeContext)
   return (
     <FooterContainer>
-      <NightModeButton onClick={() => toggleTheme()}>
-        Changer de mode : {theme === 'light' ? '☀️' : '🌙'}
-      </NightModeButton>
     </FooterContainer>
   )
 }

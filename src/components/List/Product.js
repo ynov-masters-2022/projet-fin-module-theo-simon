@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import styles from './index.styl';
 
 import { CartContext } from '../../utils/Contexts';
+import {Link} from "react-router-dom";
 
 const Product = ({ product }) => {
 
@@ -14,6 +15,7 @@ const Product = ({ product }) => {
       <h2>{product.title}</h2>
       <div className={styles.footer}>
         <button onClick={addToCart}>Add to cart</button>
+        <Link to={`/product/${product.id}`}>Voir le produit en détail</Link>
         <p>{product.price}$</p>
       </div>
     </div>

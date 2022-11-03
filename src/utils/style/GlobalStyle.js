@@ -1,11 +1,12 @@
 const {useContext} = require("react");
 const {ThemeContext} = require("../Contexts");
-import {createGlobalStyle} from 'styled-components'
+import {createGlobalStyle} from 'styled-components';
+import colors from "./colors";
 
 const StyledGlobalStyle = createGlobalStyle`
     body {
-        background-color: ${({isDarkMode}) => isDarkMode ? '#2F2E41' : 'white'};
-        color: ${({isDarkMode}) => isDarkMode ? 'white' : 'black'};
+        background-color: ${({isDarkMode}) => isDarkMode ? '#1b1b1d' : 'white'};
+        color: ${({isDarkMode}) => isDarkMode ? colors.white : colors.black};
         margin: 0;
     }
 `;
