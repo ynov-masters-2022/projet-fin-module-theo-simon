@@ -20,7 +20,7 @@ export default () => {
           <a onClick={_onPageChange.bind(null, 'Add')} >Add a product</a>
           <div className={styles.cart}>
             <img
-              src="cart.svg"
+              src="/cart.svg"
               onClick={onCartClick}
               width="25px"
               height="25px"
