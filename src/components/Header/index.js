@@ -28,12 +28,7 @@ export default () => {
         <div className={styles.menu}>
           <Nav />
           <div className={styles.cart}>
-            <img
-              src="/cart.svg"
-              onClick={onCartClick}
-              width="25px"
-              height="25px"
-            />
+            <a onClick={onCartClick}>Mon panier</a>
             <CartModal ref={cartModalRef} />
           </div>
           <NightModeButton onClick={() => toggleTheme()}>

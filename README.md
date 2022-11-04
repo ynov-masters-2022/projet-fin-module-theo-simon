@@ -251,7 +251,8 @@ const Product = async ({ productId }) => {
 
 ```
 
-##Styled-components
+## Styled-components
+
 Pour le them dark/light on utilise une fonction createGlobalStyle de styled-components. Cette fonction permet comme
 son nom l'indique, elle permet de créer du CSS global qui sera appliqué dans tous les composants. 
 ```js
