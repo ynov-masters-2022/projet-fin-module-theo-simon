@@ -17,8 +17,6 @@ The different features and their usage will be detailed in this documentation.
 
 ## Features
 
-### React Router
-
 ### Contexts
 
 Contexts are used to share data across multiple part or components of a react app.
@@ -28,6 +26,7 @@ The Context is created in a list of all contexts that can be use later in compon
 
 ```js
 // contexts/index.js
+
 export const AppContext = createContext({});
 ```
 
@@ -35,13 +34,18 @@ Then we specify different values and methods for the context:
 
 ```js
 // AppContextProvider.js
-export default ({ children }) => {
 
-  const [cart, setCart] = useState([]);
+export default ({ children }) => {
+  const reducer = (state, action) => ({ ...state, action })
+
+  const [state, dispatch] = useReducer(reducer ,{
+    products: [],
+    // other context values
+  });
 
   const getContextValue = () => ({
-    cart,
-    setCart,
+    state,
+    dispatch,
   });
 
   return (
@@ -117,4 +121,21 @@ const List = () => {
 
 It allows to **run asynchronous tasks in a component body** that cannot by asynchronous.
 
-### CSS Modules
+But Suspense also permits to wait for an imported component to be loaded. To do so, we use React.lazy:
+
+```js
+const OtherComponent = React.lazy(() => import('./OtherComponent'));
+
+function MyComponent() {
+  return (
+    <div>
+      <Suspense fallback={<div>Chargement...</div>}>
+        <OtherComponent />
+      </Suspense>
+    </div>
+  );
+}
+```
+
+### React Server Components (RSC)
+
