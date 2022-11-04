@@ -15,7 +15,9 @@ const Product = ({ product }) => {
       <h2>{product.title}</h2>
       <div className={styles.footer}>
         <button onClick={addToCart}>Add to cart</button>
-        <Link to={`/product/${product.id}`}>Voir le produit en détail</Link>
+        {
+          //<Link to={`/product/${product.id}`}>Voir le produit en détail</Link>
+        }
         <p>{product.price}$</p>
       </div>
     </div>
