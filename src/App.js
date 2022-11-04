@@ -6,8 +6,13 @@ import GlobalStyle from './utils/style/GlobalStyle';
 
 import Header from './components/Header'
 import AppRouter from './components/AppRouter';
+import {useEffect, useState} from "react";
 
 const App = () => {
+  const [total, setTotal] = useState(0)
+  function useCountState() {
+
+  }
 
 	return (
     <ThemeContextProvider>

@@ -331,3 +331,42 @@ return (
         </ThemeContextProvider>
 );
 ```
+
+Avec styled components on peut surcharger un élément déjà créer. 
+Par exemple on créer un bouton avec un style puis on peut créer un autre bouton avec comme base.
+"Button" et surchargé le CSS.
+```js 
+const Button = styled.button`
+  display: inline-block;
+  color: palevioletred;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+  display: block;
+`;
+
+  const TomatoButton = styled(Button)`
+  color: tomato;
+  border-color: tomato;
+`;
+  ...
+<Button as="a" href="#">Bouton</Button>
+<TomatoButton as="a" href="#">Bouton surchargé</TomatoButton>
+```
+On peut également passer en paramètre une propriété css
+```js 
+const Input = styled.input`
+padding: 0.5em;
+margin: 0.5em;
+color: ${props => props.inputColor || "palevioletred"};
+background: papayawhip;
+border: none;
+border-radius: 3px;
+`;
+
+...
+<Input defaultValue="@probablyup" type="text" />
+<Input defaultValue="@geelen" type="text" inputColor="rebeccapurple" />
+```
