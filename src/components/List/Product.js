@@ -12,7 +12,7 @@ const Product = ({ product }) => {
 
   return (
     <div className={styles.product}>
-      <h2>{product.title}</h2>
+      <h3>{product.title}</h3>
       <div className={styles.footer}>
         <button onClick={addToCart}>Add to cart</button>
         {
