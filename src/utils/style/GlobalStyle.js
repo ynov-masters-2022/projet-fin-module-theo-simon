@@ -13,6 +13,9 @@ const StyledGlobalStyle = createGlobalStyle`
     body a {
       color: ${({isDarkMode}) => isDarkMode ? colors.white : colors.black};
     }
+    li a {
+     color: ${({isDarkMode}) => isDarkMode ? colors.white : colors.black} !important;
+    }
 `;
 
 function GlobalStyle() {

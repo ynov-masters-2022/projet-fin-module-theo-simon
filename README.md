@@ -251,3 +251,83 @@ const Product = async ({ productId }) => {
 
 ```
 
+##Styled-components
+Pour le them dark/light on utilise une fonction createGlobalStyle de styled-components. Cette fonction permet comme
+son nom l'indique, elle permet de créer du CSS global qui sera appliqué dans tous les composants. 
+```js
+const StyledGlobalStyle = createGlobalStyle`
+    body {
+        background-color: ${({isDarkMode}) => isDarkMode ? '#1b1b1d' : 'white'};
+        color: ${({isDarkMode}) => isDarkMode ? colors.white : colors.black};
+        margin: 0;
+    }
+    li a {
+     color: ${({isDarkMode}) => isDarkMode ? colors.white : colors.black} !important;
+    }
+`;
+```
+
+Dans ce cas, on utilise le thème dark, mais on pourrait imaginer un système plus poussé où il pourrait.
+y avoir des thèmes en fonction de la période de l'année (halloween, Noël, etc)
+```js 
+function GlobalStyle() {
+  const {theme} = useContext(ThemeContext)
+
+  return <StyledGlobalStyle isDarkMode={theme === 'dark'}/>
+}
+
+export default GlobalStyle
+```
+
+Pour le bouton de changement il est dans le header, il change de forme en fonction du theme (light ou dark). On peut également créer un styled components
+si l'on souhaite appliquer le même style sur plusieurs boutons. L'intérêt c'est plutôt de pouvoir passer des informations en paramètre, afin de faire une stylisation personnaliser en fonction d'un param
+
+```js 
+const {toggleTheme, theme} = useContext(ThemeContext)
+const NightModeButton = styled.button`
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-size: 16px; 
+`
+
+return (
+        <>
+          <header>
+            <h1>Buy products</h1>
+            <div className={styles.menu}>
+              <NightModeButton onClick={() => toggleTheme()}>
+                {theme === 'light' ? '☀️' : '🌙'}
+              </NightModeButton>
+              <Nav />
+              <Outlet />
+              <div className={styles.cart}>
+                <img
+                        src="/cart.svg"
+                        onClick={onCartClick}
+                        width="25px"
+                        height="25px"
+                />
+                <CartModal ref={cartModalRef} />
+              </div>
+            </div>
+          </header>
+        </>
+);
+```
+
+Dans l'App.js on applique notre GlobalStyle, qui va donc appliquer le style sur le body
+```js 
+return (
+        <ThemeContextProvider>
+          <GlobalStyle />
+          <BrowserRouter>
+            <CartContextProvider>
+              <Header />
+              <AppRouter />
+            </CartContextProvider>
+          </BrowserRouter>
+        </ThemeContextProvider>
+);
+```
