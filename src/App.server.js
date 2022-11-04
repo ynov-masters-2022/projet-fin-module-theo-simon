@@ -5,7 +5,7 @@ import ThemeContextProvider from './utils/ThemeContextProvider';
 import GlobalStyle from './utils/style/GlobalStyle';
 
 import Header from './components/Header'
-import AppRouter from './components/AppRouter';
+import AppRouter from './components/AppRouter/index.server';
 
 const App = () => {
 
