@@ -371,3 +371,29 @@ border-radius: 3px;
 <Input defaultValue="@probablyup" type="text" />
 <Input defaultValue="@geelen" type="text" inputColor="rebeccapurple" />
 ```
+
+##Hooks personnalisés
+Dans React js on peut créer son propre hook. Si une fonction fait la chose plus d'une fois, alors il est bien de le transformer
+en une seule fonction appelable n'importe où
+```js 
+export const useDocumentTitle = (param) => {
+  document.title = param;
+  console.log(param)
+}
+```
+Dans un composant on peut donc appeler cette fonction et lui passer un paramètre
+```js
+const {Component} = require("react");
+import {useDocumentTitle} from "../../utils/functions"
+
+class Hooks extends Component {
+
+  render() {
+    useDocumentTitle("Section HOOKS")
+  }
+}
+
+export default Hooks
+
+```
+
