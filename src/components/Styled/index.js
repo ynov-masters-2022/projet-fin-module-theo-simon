@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import {useDocumentTitle} from "../../utils/functions"
 
 const Styled = () => {
+  useDocumentTitle("Section STYLED-COMPONENTS")
   const Button = styled.button`
   display: inline-block;
   color: palevioletred;
